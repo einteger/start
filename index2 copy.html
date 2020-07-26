@@ -1,0 +1,73 @@
+<html>
+    <head> 
+
+        <style>
+            text {
+                font-size: 24px;
+                color: black;
+                font-style: unset;
+            }
+            p {
+                font-size: 18px;
+                font-style: initial;
+                color: rgb(255, 0, 0);
+            }
+            body {
+                background-color :cadetblue;
+                background-repeat: no-repeat;
+                background-size: cover;
+                            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <text>하늘 구경하기</text>
+        </div>
+    
+        <img src="img.jpg" height="300" alt="학교사진" title="SNU">
+        <div>
+            <text> SIGN UP </text>
+        </div>
+        <div>
+            <lavel> id </lavel>
+            <input id='id' type ="text">
+        </div>
+        <div>
+            <label>pwd</label>
+            <input id='pwd' type="password">
+        </div>
+        <div>
+            <label>pwd check</label>
+            <input id='pwdchk' type="password" oninput="test()"> 
+            <p id="hoho"> 비밀번호 확인 </p>
+        </div>
+        <div>
+            <input type="button" value="들어가기" onclick="test2()">
+        </div>
+            
+    </body>
+    <script>
+      function test() {
+          let a = document.getElementById('hoho');
+          let pwd = document.getElementById('pwd');
+          let pwdchk = document.getElementById('pwdchk');
+          if(pwd.value !== pwdchk.value) {
+              a.innerHTML = '비밀번호가 다릅니다';
+          } else {
+              a.innerHTML = '사용가능한 비밀번호입니다';
+          }
+      }
+
+      function test2() {
+          let a = document.getElementById('hoho');
+          let pwd = document.getElementById('pwd');
+          let pwdchk = document.getElementById('pwdchk');
+          if(pwd.value == pwdchk.value) { 
+              alert(" 가입완료 :) ");
+          } else {
+              alert("사용가능한 비밀번호가 아닙니다");
+          }
+      }
+    </script>
+
+</html>
